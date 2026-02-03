@@ -23,7 +23,7 @@ def run():
     print("Добро пожаловать в угадыватель чисел!")
     print("Начните играть и настройте его под себя!")
     print("=" * 55)
-    print(MAGENTA + "Version 1.0.1 Release")
+    print(MAGENTA + "Version 1.1.0 Release")
 
     try:
         number_of_games = int(input(HINT + "Введите количество желаемых игр: "))
