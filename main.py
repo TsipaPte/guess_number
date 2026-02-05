@@ -6,7 +6,7 @@ import functions
 def main() -> None:
     """Функция запускающая главную логику"""
     
-    functions.run()
+    functions.menu()
 
     click.pause("Нажмите любую клавишу для выхода ...")
 
