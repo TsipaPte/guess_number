@@ -1,7 +1,9 @@
 "Файл хранящий основной код программы"
 
 import random
+import sys
 import colorama
+import questionary
 
 colorama.init(autoreset=True)
 
@@ -13,17 +15,27 @@ GREEN = colorama.Fore.CYAN
 MAGENTA = colorama.Fore.MAGENTA
 YELLOW = colorama.Fore.YELLOW
 
+def menu():
+    print("Добро пожаловать в угадыватель чисел!")
+    print("Начните играть и настройте его под себя!")
+    print("=" * 55)
+    print(MAGENTA + "Version 1.2.0 Release")
+    print()
+
+    terminal_menu = questionary.select("Главное меню:", ("Начать игру", "Выход"))
+    user_answer = terminal_menu.ask()
+
+    if user_answer == "Начать игру":
+        run()
+    elif user_answer == "Выход":
+        sys.exit()
+
 def run():
     """Запуск главного меню и создание игры
     
     :return: Функция ничего не возвращает
     :rtype: None
     """
-
-    print("Добро пожаловать в угадыватель чисел!")
-    print("Начните играть и настройте его под себя!")
-    print("=" * 55)
-    print(MAGENTA + "Version 1.1.0 Release")
 
     try:
         number_of_games = int(input(HINT + "Введите количество желаемых игр: "))
