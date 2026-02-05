@@ -16,6 +16,13 @@ MAGENTA = colorama.Fore.MAGENTA
 YELLOW = colorama.Fore.YELLOW
 
 def menu():
+    """
+    Функция, показывающая главное меню для пользователя
+
+    :return: Функция ничего не возвращает
+    :rtype: None
+    """
+
     print("Добро пожаловать в угадыватель чисел!")
     print("Начните играть и настройте его под себя!")
     print("=" * 55)
@@ -26,12 +33,12 @@ def menu():
     user_answer = terminal_menu.ask()
 
     if user_answer == "Начать игру":
-        run()
+        games_manager()
     elif user_answer == "Выход":
         sys.exit()
 
-def run():
-    """Запуск главного меню и создание игры
+def games_manager():
+    """Функция, управляющая запуском и настройкой игр
     
     :return: Функция ничего не возвращает
     :rtype: None
